@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { AppRoute } from '../types/General-type';
+import { NotFoundScene } from '../scenes';
 
 type Props = {
   sceneList: Array<AppRoute>;
@@ -23,9 +24,10 @@ export default function Router(props: Props) {
           );
         })}
         <Route
-          render={() => {
-            return <div>Not Found</div>;
-          }}
+          component={NotFoundScene}
+          // render={() => {
+          //   return <div>Not Found</div>;
+          // }}
         />
       </Switch>
     </div>
