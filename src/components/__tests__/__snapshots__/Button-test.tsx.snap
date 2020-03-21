@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Button successfully 1`] = `
+<button
+  onClick={[MockFunction]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#666ee8",
+      "borderColor": "#3a44e1",
+      "borderRadius": "0.25rem",
+      "color": "#fff",
+      "cursor": "pointer",
+      "fontSize": 16,
+      "fontWeight": 600,
+      "padding": "0.75rem 1rem",
+      "textTransform": "uppercase",
+    }
+  }
+>
+  test
+</button>
+`;
