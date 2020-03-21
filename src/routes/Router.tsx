@@ -36,5 +36,6 @@ const styles = {
   rootContainer: {
     display: 'flex',
     flex: 1,
+    width: '100%',
   },
 };

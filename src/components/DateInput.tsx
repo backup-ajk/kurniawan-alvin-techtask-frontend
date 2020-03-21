@@ -36,7 +36,7 @@ class ValueContainer extends React.Component<{
 
 const styles = {
   dateContainer: {
-    flex: 1,
+    width: 150,
     backgroundColor: '#EFEFEF',
     borderColor: '#0064D2',
     borderWidth: 2,

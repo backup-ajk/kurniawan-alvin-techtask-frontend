@@ -19,9 +19,9 @@ exports[`should render Date Input successfully 1`] = `
           "borderWidth": 2,
           "cursor": "pointer",
           "display": "flex",
-          "flex": 1,
           "justifyContent": "center",
           "padding": 10,
+          "width": 150,
         }
       }
     >
