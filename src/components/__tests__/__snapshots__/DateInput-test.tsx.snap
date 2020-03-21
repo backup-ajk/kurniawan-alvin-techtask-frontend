@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Date Input successfully 1`] = `
+<div
+  className="react-datepicker-wrapper"
+>
+  <div
+    className="react-datepicker__input-container"
+  >
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#EFEFEF",
+          "borderColor": "#0064D2",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 2,
+          "cursor": "pointer",
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "center",
+          "padding": 10,
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#212121",
+            "fontSize": 18,
+          }
+        }
+      >
+        21-03-2020
+      </span>
+    </div>
+  </div>
+</div>
+`;
