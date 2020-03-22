@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Redirect } from 'react-router-dom';
 
 import { Button, DateInput, IngredientBox } from '../components';
 import {
@@ -17,6 +17,7 @@ type State = {
   isFetchingIngredients: boolean;
   ingredientList: Array<Ingredient>;
   selectedIngredients: Array<string>;
+  initSearchRecipe: boolean;
 };
 type Props = RouteComponentProps & {};
 
@@ -26,6 +27,7 @@ export default class HomeScene extends React.Component<Props, State> {
     isFetchingIngredients: false,
     ingredientList: [],
     selectedIngredients: [],
+    initSearchRecipe: false,
   };
 
   componentDidMount() {
@@ -36,7 +38,22 @@ export default class HomeScene extends React.Component<Props, State> {
     });
   }
   render() {
-    const { selectedDate, isFetchingIngredients } = this.state;
+    const {
+      selectedDate,
+      isFetchingIngredients,
+      initSearchRecipe,
+      selectedIngredients,
+    } = this.state;
+
+    if (initSearchRecipe) {
+      return (
+        <Redirect
+          to={`/recipes?ingredients=${selectedIngredients.join(
+            ',',
+          )}&lunchDate=${convertDateToString(selectedDate)}`}
+        />
+      );
+    }
 
     return (
       <div style={styles.rootContainer}>
@@ -104,7 +121,7 @@ export default class HomeScene extends React.Component<Props, State> {
         <Button
           label={'Find Recipes'}
           onClick={() => {
-            console.log('Clicked');
+            this.setState({ initSearchRecipe: true });
           }}
           theme={'success'}
         />

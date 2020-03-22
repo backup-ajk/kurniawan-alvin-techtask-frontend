@@ -5,7 +5,7 @@ import { DateInput } from '../';
 import ReactDatePicker from 'react-datepicker';
 
 it('should render Date Input successfully', () => {
-  let testDate = new Date();
+  let testDate = new Date('2020-03-21');
   const onChangeDate = (newDate: Date) => {
     testDate = newDate;
   };
