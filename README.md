@@ -2,6 +2,15 @@
 
 Web App for Lunch Recipes Suggestion, built with create react app with typescript template
 
+## Live website
+
+Open [website](https://naughty-swanson-187d2b.netlify.com/).
+
+## Installation
+- git clone this repository
+- cd to root directory, run `yarn`
+- run `yarn start` to start development mode, or `yarn build` to build the app to the build folder.
+
 ## Available Scripts
 
 ### `yarn start`
