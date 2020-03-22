@@ -1,4 +1,4 @@
-# Lucnh Suggestion - FE Tech Task
+# Lunch Suggestion - FE Tech Task
 
 Web App for Lunch Recipes Suggestion, built with create react app with typescript template
 
