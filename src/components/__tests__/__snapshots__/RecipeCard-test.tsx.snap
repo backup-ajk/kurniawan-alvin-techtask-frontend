@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Recipe Card successfully 1`] = `
+<div
+  style={
+    Object {
+      "borderColor": "#546e7a",
+      "borderRadius": 10,
+      "borderStyle": "solid",
+      "borderWidth": 5,
+      "cursor": "pointer",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": 200,
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#607d8b",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "color": "#fff",
+        "display": "flex",
+        "fontSize": 24,
+        "fontWeight": 600,
+        "justifyContent": "center",
+        "padding": 10,
+      }
+    }
+  >
+    KFC Rice
+  </div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#cfd8dc",
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "display": "flex",
+        "flex": 1,
+        "overflowY": "scroll",
+      }
+    }
+  >
+    <ul
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "marginTop": 5,
+          "padding": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <li
+        style={
+          Object {
+            "display": "block",
+            "fontSize": 18,
+            "fontWeight": 500,
+            "marginBottom": -1,
+            "padding": "0.5rem",
+            "position": "relative",
+          }
+        }
+      >
+        Rice
+      </li>
+      <li
+        style={
+          Object {
+            "display": "block",
+            "fontSize": 18,
+            "fontWeight": 500,
+            "marginBottom": -1,
+            "padding": "0.5rem",
+            "position": "relative",
+          }
+        }
+      >
+        Original KFC
+      </li>
+      <li
+        style={
+          Object {
+            "display": "block",
+            "fontSize": 18,
+            "fontWeight": 500,
+            "marginBottom": -1,
+            "padding": "0.5rem",
+            "position": "relative",
+          }
+        }
+      >
+        Water
+      </li>
+    </ul>
+  </div>
+</div>
+`;
