@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h2>Lunch Suggestion</h2>
+        <h1>Lunch Suggester</h1>
         <Router sceneList={sceneList} />
       </div>
     </BrowserRouter>
