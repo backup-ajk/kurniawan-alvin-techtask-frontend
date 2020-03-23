@@ -18,6 +18,7 @@ type State = {
   ingredientList: Array<Ingredient>;
   selectedIngredients: Array<string>;
   initSearchRecipe: boolean;
+  errorMessage: string;
 };
 type Props = RouteComponentProps & {};
 
@@ -28,6 +29,7 @@ export default class HomeScene extends React.Component<Props, State> {
     ingredientList: [],
     selectedIngredients: [],
     initSearchRecipe: false,
+    errorMessage: '',
   };
 
   componentDidMount() {
@@ -116,15 +118,23 @@ export default class HomeScene extends React.Component<Props, State> {
   };
 
   _renderBottom = () => {
+    const { selectedIngredients, errorMessage } = this.state;
     return (
       <div style={styles.bottomContainer}>
         <Button
           label={'Find Recipes'}
           onClick={() => {
-            this.setState({ initSearchRecipe: true });
+            if (selectedIngredients.length === 0) {
+              this.setState({
+                errorMessage: 'Please select ingredients first!',
+              });
+            } else {
+              this.setState({ initSearchRecipe: true });
+            }
           }}
           theme={'success'}
         />
+        <span style={styles.errorMessage}>{errorMessage}</span>
       </div>
     );
   };
@@ -139,7 +149,7 @@ export default class HomeScene extends React.Component<Props, State> {
       selectedIngredients.splice(selectedIndex, 1);
     }
     console.log(selectedIngredients);
-    this.setState({ selectedIngredients });
+    this.setState({ selectedIngredients, errorMessage: '' });
   };
 
   async _fetchDataFromServer() {
@@ -195,5 +205,10 @@ const styles: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  errorMessage: {
+    height: 20,
+    fontSize: 16,
+    color: '#ff0000',
   },
 };
